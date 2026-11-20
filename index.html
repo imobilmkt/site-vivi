@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Viviane DaSilva — Real Estate Advisor · Luxury Homes in South Florida</title>
+  <meta name="description" content="Viviane DaSilva, Real Estate Advisor. Exceptional South Florida homes, personally guided — in English, Português and Español.">
+  <meta name="theme-color" content="#FAF9F6">
+  <meta property="og:title" content="Viviane DaSilva — Home, curated.">
+  <meta property="og:description" content="Exceptional South Florida homes, personally guided. EN · PT · ES">
+  <meta property="og:image" content="assets/img/st-regis-sunny-isles/terrace.webp">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/st-regis-sunny-isles/terrace.webp">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="on-hero">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="#top" data-logo aria-label="Viviane DaSilva — Real Estate Advisor"></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#residences" data-i18n="nav.residences">Residences</a>
+      <a href="#buyers" data-i18n="nav.buyers">International Buyers</a>
+      <a href="#neighborhoods" data-i18n="nav.neighborhoods">Neighborhoods</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="en" aria-pressed="true">EN</button><button data-lang="pt" aria-pressed="false">PT</button><button data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <img class="hero__bg" src="assets/img/st-regis-sunny-isles/terrace.webp" alt="Oceanfront terrace at The St. Regis Residences, Sunny Isles Beach" fetchpriority="high">
+    <div class="hero__shade" aria-hidden="true"></div>
+    <div class="container hero__content">
+      <div class="hero__text">
+        <p class="label" data-i18n="hero.eyebrow">Luxury Real Estate · South Florida</p>
+        <h1 class="display" data-i18n-html="hero.title">Home, <em>curated.</em></h1>
+        <p class="lede" data-i18n="hero.lede">Exceptional South Florida homes, personally guided.</p>
+        <div class="hero__actions">
+          <a class="btn btn--light-solid" href="#residences" data-i18n="hero.cta">View residences</a>
+          <a class="btn btn--light" href="#contact" data-i18n="cta.consult">Schedule a private consultation</a>
+        </div>
+      </div>
+      <a class="hero__credit" href="residence.html?id=st-regis-sunny-isles" data-keep-lang>The St. Regis Residences · Sunny Isles Beach</a>
+    </div>
+    <span class="hero__scroll" aria-hidden="true"></span>
+  </section>
+
+  <!-- Intro -->
+  <section class="section container">
+    <div class="intro reveal">
+      <p class="label" data-i18n="intro.label">The approach</p>
+      <p class="statement" data-i18n="intro.text"></p>
+    </div>
+  </section>
+
+  <div class="container"><hr class="rule"></div>
+
+  <!-- Featured residences -->
+  <section class="section" id="residences">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <p class="label" data-i18n="featured.label">Featured Residences</p>
+          <h2 class="h2" data-i18n-html="featured.title">A short <em>selection.</em></h2>
+        </div>
+        <p class="fine" data-i18n="featured.note"></p>
+      </div>
+      <div class="grid" id="residences-grid"></div>
+    </div>
+  </section>
+
+  <!-- International buyers (the one Sky band) -->
+  <section class="band band--sky" id="buyers">
+    <div class="container buyers">
+      <div class="reveal">
+        <p class="label" data-i18n="buyers.label">International Buyers</p>
+        <h2 class="h2" data-i18n-html="buyers.title">Three languages. <em>One standard.</em></h2>
+        <p data-i18n="buyers.text"></p>
+        <p class="langs">EN · PT · ES</p>
+      </div>
+      <ul class="pillars reveal">
+        <li><span class="n">01</span><div><h3 data-i18n="buyers.1.t"></h3><p data-i18n="buyers.1.d"></p></div></li>
+        <li><span class="n">02</span><div><h3 data-i18n="buyers.2.t"></h3><p data-i18n="buyers.2.d"></p></div></li>
+        <li><span class="n">03</span><div><h3 data-i18n="buyers.3.t"></h3><p data-i18n="buyers.3.d"></p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Neighborhoods -->
+  <section class="section container" id="neighborhoods">
+    <div class="section-head reveal">
+      <div>
+        <p class="label" data-i18n="hoods.label">Neighborhoods</p>
+        <h2 class="h2" data-i18n-html="hoods.title">Where we <em>work.</em></h2>
+      </div>
+    </div>
+    <ul class="hoods reveal">
+      <li><span>01</span>Miami Beach</li>
+      <li><span>02</span>Sunny Isles Beach</li>
+      <li><span>03</span>Bay Harbor Islands</li>
+      <li><span>04</span>Brickell</li>
+      <li><span>05</span>Edgewater</li>
+      <li><span>06</span>Key Biscayne</li>
+      <li><span>07</span>Coral Gables</li>
+      <li><span>08</span>Fort Lauderdale</li>
+      <li><span>09</span>Boca Raton</li>
+    </ul>
+  </section>
+
+  <!-- About -->
+  <section class="band band--cream" id="about">
+    <div class="container about">
+      <div class="reveal">
+        <!-- Replace with natural-light portrait (light background, white / light blue / grey wardrobe) -->
+        <figure class="arch portrait" aria-hidden="true"><svg class="mark" viewBox="0 0 44 56"><path d="M3 56V22a19 19 0 0 1 38 0v34" fill="none" stroke="currentColor" stroke-width="1"/><text x="22" y="41" text-anchor="middle" font-family="Jost, sans-serif" font-weight="300" font-size="15" letter-spacing="1.2" fill="currentColor">VD</text></svg></figure>
+      </div>
+      <div class="reveal">
+        <p class="label" data-i18n="about.label">About</p>
+        <h2 class="h2" data-i18n-html="about.title">Viviane <em>DaSilva</em></h2>
+        <p class="role" data-i18n="about.role">Real Estate Advisor</p>
+        <blockquote data-i18n="about.text"></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Private Collection -->
+  <section class="section container">
+    <div class="pc reveal">
+      <div>
+        <p class="label" data-i18n="pc.label">Private Collection</p>
+        <h2 class="h2" data-i18n-html="pc.title"></h2>
+        <p data-i18n="pc.text"></p>
+      </div>
+      <form data-form="pc" novalidate>
+        <div class="pc-form">
+          <label class="sr-only" for="pc-email" data-i18n="pc.email">Email address</label>
+          <input id="pc-email" type="email" required autocomplete="email" data-i18n-ph="pc.email" placeholder="Email address">
+          <button class="btn" type="submit" data-i18n="pc.submit">Request access</button>
+        </div>
+        <p class="form-ok" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <div class="container"><hr class="rule"></div>
+
+  <!-- Contact -->
+  <section class="section container" id="contact">
+    <div class="contact">
+      <div class="reveal">
+        <p class="label" data-i18n="contact.label">Contact</p>
+        <h2 class="h2" data-i18n-html="contact.title"></h2>
+        <p data-i18n="contact.text"></p>
+        <div class="contact-lines">
+          <a data-tel href="#"></a>
+          <a data-mail href="#"></a>
+          <a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <form class="contact-form reveal" data-form="contact" novalidate>
+        <div class="form-fields">
+          <label class="field"><span data-i18n="form.name">Full name</span><input name="name" required autocomplete="name"></label>
+          <div class="row">
+            <label class="field"><span data-i18n="form.email">Email</span><input name="email" type="email" required autocomplete="email"></label>
+            <label class="field"><span data-i18n="form.phone">Phone / WhatsApp</span><input name="phone" type="tel" autocomplete="tel"></label>
+          </div>
+          <label class="field"><span data-i18n="form.interest">I am interested in</span>
+            <select name="interest">
+              <option data-i18n="form.opt.buy">Buying</option>
+              <option data-i18n="form.opt.sell">Selling</option>
+              <option data-i18n="form.opt.invest">Investing</option>
+              <option data-i18n="form.opt.relocate">Relocating</option>
+            </select>
+          </label>
+          <label class="field"><span data-i18n="form.message">Message</span><textarea name="message" rows="3"></textarea></label>
+          <button class="btn btn--solid" type="submit" data-i18n="form.submit">Send request</button>
+        </div>
+        <p class="form-ok" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="#top" data-logo aria-label="Viviane DaSilva"></a>
+        <p><em data-i18n="footer.tagline">Home, curated.</em></p>
+      </div>
+      <div class="footer-col">
+        <a href="#residences" data-i18n="nav.residences">Residences</a>
+        <a href="#buyers" data-i18n="nav.buyers">International Buyers</a>
+        <a href="#neighborhoods" data-i18n="nav.neighborhoods">Neighborhoods</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+      </div>
+      <div class="footer-col">
+        <a data-tel href="#"></a>
+        <a data-mail href="#"></a>
+        <span>EN · PT · ES</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Viviane DaSilva, Real Estate Advisor · <span data-brokerage></span> · <span data-license></span> · © <span data-year></span><br><span data-i18n="footer.legal"></span></p>
+      <span class="eho"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 10h3v10h14V10h3z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M9 13h6M9 16h6" stroke="currentColor" stroke-width="1.2"/></svg><span data-i18n="footer.eho">Equal Housing Opportunity</span></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 15l-1.5 5 5.1-1.4A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3a8.2 8.2 0 1 1 6.9 3.8Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/listings.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
