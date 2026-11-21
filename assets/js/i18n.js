@@ -1,8 +1,8 @@
 /* Contact details — confirm before launch (Brand Book · 10 Próximos passos) */
 window.SITE = {
-  phone: '+1 (305) 000-0000',
-  whatsapp: '13050000000',
-  email: 'hello@vivianedasilva.com',
+  phone: '+1 (305) 915-3181',
+  whatsapp: '13059153181',
+  email: 'vivianerealestate@gmail.com',
   brokerage: '[Brokerage Name]',
   license: 'FL License [#000000]'
 };

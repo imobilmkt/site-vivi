@@ -11,7 +11,7 @@ Site estático (HTML/CSS/JS, sem build), seguindo o Brand Book 2026: paleta Coas
 Para rodar localmente, sirva a pasta com qualquer servidor estático (por exemplo `npx serve .`).
 
 ## Antes de publicar
-1. Em `assets/js/i18n.js`, trocar os dados de `window.SITE`: telefone, WhatsApp, e-mail, nome da brokerage e número da licença
+1. Em `assets/js/i18n.js`, trocar os dados de `window.SITE` que ainda são placeholder: nome da brokerage e número da licença (telefone, WhatsApp e e-mail já estão preenchidos)
 2. Ligar os formulários de contato e da Private Collection a um serviço (Formspree, CRM etc.). Hoje eles só mostram a mensagem de confirmação.
 3. Trocar o placeholder da seção "Sobre" pelo retrato da Viviane
 4. Validar títulos e textos legais com a brokerage
