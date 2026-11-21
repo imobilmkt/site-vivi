@@ -56,7 +56,13 @@ window.I18N = {
     'res.more': 'More residences',
     'res.note': 'Developer figures, subject to change.',
     'wa.msg': 'Hello Viviane, I would like to schedule a private consultation.',
-    'wa.msg.res': 'Hello Viviane, I would like information about'
+    'wa.msg.res': 'Hello Viviane, I would like information about',
+    'search.label': 'Search residences', 'search.sale': 'For sale', 'search.rent': 'For rent', 'search.sold': 'Sold',
+    'search.ph': 'City, neighborhood or building', 'search.submit': 'Search',
+    'search.one': 'residence', 'search.many': 'residences', 'search.clear': 'Clear search',
+    'search.empty': 'No published residence matches this search. Viviane can search the full market for you, including off-market homes.',
+    'search.ask': 'Ask Viviane', 'search.all': 'See all residences',
+    'wa.msg.search': 'Hello Viviane, I am looking for:'
   },
   pt: {
     'nav.residences': 'Residências', 'nav.buyers': 'Compradores internacionais', 'nav.neighborhoods': 'Bairros', 'nav.about': 'Sobre', 'nav.contact': 'Contato',
@@ -106,7 +112,13 @@ window.I18N = {
     'res.more': 'Outras residências',
     'res.note': 'Dados da incorporadora, sujeitos a alteração.',
     'wa.msg': 'Olá, Viviane. Gostaria de agendar uma consulta privada.',
-    'wa.msg.res': 'Olá, Viviane. Gostaria de informações sobre'
+    'wa.msg.res': 'Olá, Viviane. Gostaria de informações sobre',
+    'search.label': 'Buscar imóveis', 'search.sale': 'À venda', 'search.rent': 'Para alugar', 'search.sold': 'Vendidos',
+    'search.ph': 'Cidade, bairro ou edifício', 'search.submit': 'Buscar',
+    'search.one': 'imóvel', 'search.many': 'imóveis', 'search.clear': 'Limpar busca',
+    'search.empty': 'Nenhum imóvel publicado corresponde a esta busca. A Viviane pode procurar no mercado inteiro para você, incluindo imóveis off-market.',
+    'search.ask': 'Falar com a Viviane', 'search.all': 'Ver todos os imóveis',
+    'wa.msg.search': 'Olá, Viviane. Estou procurando:'
   },
   es: {
     'nav.residences': 'Residencias', 'nav.buyers': 'Compradores internacionales', 'nav.neighborhoods': 'Barrios', 'nav.about': 'Sobre mí', 'nav.contact': 'Contacto',
@@ -156,6 +168,12 @@ window.I18N = {
     'res.more': 'Otras residencias',
     'res.note': 'Datos del desarrollador, sujetos a cambios.',
     'wa.msg': 'Hola, Viviane. Me gustaría agendar una consulta privada.',
-    'wa.msg.res': 'Hola, Viviane. Me gustaría información sobre'
+    'wa.msg.res': 'Hola, Viviane. Me gustaría información sobre',
+    'search.label': 'Buscar propiedades', 'search.sale': 'En venta', 'search.rent': 'En alquiler', 'search.sold': 'Vendidas',
+    'search.ph': 'Ciudad, barrio o edificio', 'search.submit': 'Buscar',
+    'search.one': 'residencia', 'search.many': 'residencias', 'search.clear': 'Borrar búsqueda',
+    'search.empty': 'Ninguna propiedad publicada coincide con esta búsqueda. Viviane puede buscar en todo el mercado para usted, incluidas propiedades off-market.',
+    'search.ask': 'Hablar con Viviane', 'search.all': 'Ver todas las residencias',
+    'wa.msg.search': 'Hola, Viviane. Estoy buscando:'
   }
 };

@@ -28,6 +28,7 @@
     $$('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
     $$('[data-i18n-html]').forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml); });
     $$('[data-i18n-ph]').forEach((el) => { el.placeholder = t(el.dataset.i18nPh); });
+    $$('[data-i18n-aria]').forEach((el) => { el.setAttribute('aria-label', t(el.dataset.i18nAria)); });
     $$('.lang button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
     $$('[data-wa]').forEach((a) => { a.href = wa(t('wa.msg')); });
     $$('[data-tel]').forEach((a) => { a.href = 'tel:' + SITE.phone.replace(/[^+\d]/g, ''); a.textContent = SITE.phone; });
@@ -86,8 +87,101 @@
   function renderFeatured() {
     const grid = $('#residences-grid');
     if (!grid) return;
-    grid.innerHTML = LISTINGS.map(card).join('');
+    const results = search.active ? LISTINGS.filter(matches) : LISTINGS;
+    renderSummary(results.length);
+    grid.innerHTML = results.length ? results.map(card).join('') : emptyState();
     observe();
+  }
+
+  /* ---------- Search (home) ---------- */
+  const TYPES = ['sale', 'rent', 'sold'];
+  const search = {
+    q: (params.get('q') || '').trim(),
+    type: TYPES.includes(params.get('type')) ? params.get('type') : 'sale'
+  };
+  search.active = params.has('q') || params.has('type');
+
+  const esc = (s) => s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const norm = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
+  function matches(l) {
+    if ((l.deal || 'sale') !== search.type) return false;
+    const words = norm(search.q).split(/[\s,]+/).filter(Boolean);
+    if (!words.length) return true;
+    const hay = norm([l.name, l.id.replace(/-/g, ' '), ...Object.values(l.area), ...Object.values(l.setting), l.address || ''].join(' '));
+    return words.every((w) => hay.includes(w));
+  }
+
+  function searchPhrase() {
+    return `${t('search.' + search.type)}${search.q ? ` · “${search.q}”` : ''}`;
+  }
+
+  function renderSummary(n) {
+    const box = $('#search-summary');
+    if (!box) return;
+    box.hidden = !search.active;
+    if (!search.active) { box.innerHTML = ''; return; }
+    box.innerHTML = `<p><strong>${esc(searchPhrase())}</strong> — ${n} ${t(n === 1 ? 'search.one' : 'search.many')}</p>
+      <button type="button" class="link" data-search-clear>${t('search.clear')}</button>`;
+  }
+
+  function emptyState() {
+    const msg = `${t('wa.msg.search')} ${searchPhrase()}`;
+    return `<div class="search-empty">
+      <p>${t('search.empty')}</p>
+      <div class="search-empty__actions">
+        <a class="btn btn--solid" href="${wa(msg)}" target="_blank" rel="noopener">${t('search.ask')}</a>
+        <button type="button" class="btn" data-search-clear>${t('search.all')}</button>
+      </div></div>`;
+  }
+
+  function syncSearchUrl() {
+    const u = new URL(location.href);
+    if (search.active) {
+      search.q ? u.searchParams.set('q', search.q) : u.searchParams.delete('q');
+      u.searchParams.set('type', search.type);
+    } else { u.searchParams.delete('q'); u.searchParams.delete('type'); }
+    history.replaceState(null, '', u);
+  }
+
+  const searchForm = $('form[data-search]');
+  if (searchForm) {
+    const input = $('input[name="q"]', searchForm);
+    const tabs = $$('[data-type]', searchForm);
+    const setTabs = () => tabs.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.type === search.type)));
+    input.value = search.q;
+    setTabs();
+
+    const list = $('#search-suggest');
+    if (list) {
+      const hoods = $$('.hoods li').map((li) => li.lastChild.textContent.trim());
+      const names = LISTINGS.flatMap((l) => [l.name, l.area.en]);
+      list.innerHTML = [...new Set([...hoods, ...names])].map((v) => `<option value="${esc(v)}">`).join('');
+    }
+
+    tabs.forEach((b) => b.addEventListener('click', () => {
+      search.type = b.dataset.type;
+      setTabs();
+      if (search.active) { syncSearchUrl(); renderFeatured(); }
+    }));
+
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      search.q = input.value.trim();
+      search.active = true;
+      input.blur();
+      syncSearchUrl();
+      renderFeatured();
+      $('#residences').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('[data-search-clear]')) return;
+      search.q = ''; search.type = 'sale'; search.active = false;
+      input.value = ''; setTabs();
+      syncSearchUrl();
+      renderFeatured();
+    });
   }
 
   /* ---------- Residence page ---------- */

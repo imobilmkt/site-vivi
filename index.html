@@ -47,10 +47,22 @@
         <p class="label" data-i18n="hero.eyebrow">Luxury Real Estate · South Florida</p>
         <h1 class="display" data-i18n-html="hero.title">Home, <em>curated.</em></h1>
         <p class="lede" data-i18n="hero.lede">Exceptional South Florida homes, personally guided.</p>
-        <div class="hero__actions">
-          <a class="btn btn--light-solid" href="#residences" data-i18n="hero.cta">View residences</a>
-          <a class="btn btn--light" href="#contact" data-i18n="cta.consult">Schedule a private consultation</a>
-        </div>
+        <form class="hero-search" role="search" data-search data-i18n-aria="search.label" aria-label="Search residences">
+          <div class="hero-search__tabs" role="group" data-i18n-aria="search.label" aria-label="Search residences">
+            <button type="button" data-type="sale" aria-pressed="true" data-i18n="search.sale">For sale</button>
+            <button type="button" data-type="rent" aria-pressed="false" data-i18n="search.rent">For rent</button>
+            <button type="button" data-type="sold" aria-pressed="false" data-i18n="search.sold">Sold</button>
+          </div>
+          <div class="hero-search__bar">
+            <label class="sr-only" for="hero-q" data-i18n="search.label">Search residences</label>
+            <input id="hero-q" name="q" type="search" list="search-suggest" autocomplete="off" enterkeyhint="search" data-i18n-ph="search.ph" placeholder="City, neighborhood or building">
+            <datalist id="search-suggest"></datalist>
+            <button class="hero-search__go" type="submit" data-i18n-aria="search.submit" aria-label="Search">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </form>
+        <a class="hero__consult" href="#contact" data-i18n="cta.consult">Schedule a private consultation</a>
       </div>
       <a class="hero__credit" href="residence.html?id=st-regis-sunny-isles" data-keep-lang>The St. Regis Residences · Sunny Isles Beach</a>
     </div>
@@ -77,6 +89,7 @@
         </div>
         <p class="fine" data-i18n="featured.note"></p>
       </div>
+      <div class="search-summary" id="search-summary" role="status" aria-live="polite" hidden></div>
       <div class="grid" id="residences-grid"></div>
     </div>
   </section>

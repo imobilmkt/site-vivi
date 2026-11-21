@@ -3,6 +3,7 @@
 window.LISTINGS = [
   {
     id: 'st-regis-sunny-isles',
+    deal: 'sale', // sale | rent | sold — used by the search tabs
     name: 'The St. Regis Residences',
     area: { en: 'Sunny Isles Beach', pt: 'Sunny Isles Beach', es: 'Sunny Isles Beach' },
     setting: { en: 'Oceanfront', pt: 'Frente para o mar', es: 'Frente al mar' },
@@ -33,6 +34,7 @@ window.LISTINGS = [
   },
   {
     id: '1428-brickell',
+    deal: 'sale', // sale | rent | sold — used by the search tabs
     name: 'The Residences at 1428 Brickell',
     area: { en: 'Brickell', pt: 'Brickell', es: 'Brickell' },
     setting: { en: 'Bay views', pt: 'Vista para a baía', es: 'Vista a la bahía' },
@@ -63,6 +65,7 @@ window.LISTINGS = [
   },
   {
     id: 'cipriani-residences',
+    deal: 'sale', // sale | rent | sold — used by the search tabs
     name: 'Cipriani Residences Miami',
     area: { en: 'Brickell', pt: 'Brickell', es: 'Brickell' },
     setting: { en: 'Biscayne Bay views', pt: 'Vista para Biscayne Bay', es: 'Vista a Biscayne Bay' },
@@ -93,6 +96,7 @@ window.LISTINGS = [
   },
   {
     id: 'bay-harbor-towers',
+    deal: 'sale', // sale | rent | sold — used by the search tabs
     name: 'Bay Harbor Towers',
     area: { en: 'Bay Harbor Islands', pt: 'Bay Harbor Islands', es: 'Bay Harbor Islands' },
     setting: { en: 'Intracoastal', pt: 'Intracoastal', es: 'Intracoastal' },
@@ -123,6 +127,7 @@ window.LISTINGS = [
   },
   {
     id: 'villa-miami',
+    deal: 'sale', // sale | rent | sold — used by the search tabs
     name: 'Villa Miami',
     area: { en: 'Edgewater', pt: 'Edgewater', es: 'Edgewater' },
     setting: { en: 'Bayfront', pt: 'Frente para a baía', es: 'Frente a la bahía' },
